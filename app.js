@@ -1,3 +1,4 @@
+
 const express = require('express')
 const path = require('path')
 const bodyParser = require("body-parser");
@@ -7,8 +8,6 @@ const usersRouter = require('./routes/user')
 const leaderboardRouter = require('./routes/leaderboard')
 
 const app = express()
-const PORT = 80
-
 database.connectToDB();
 
 //app.use(express.static(path.join(__dirname, 'public')));
@@ -21,6 +20,6 @@ app.use(express.urlencoded({
 app.use('/user', usersRouter);
 app.use('/leaderboard', leaderboardRouter);
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
     console.log('Express server is listening!!');
 })
