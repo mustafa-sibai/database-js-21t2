@@ -7,7 +7,7 @@ const usersRouter = require('./routes/user')
 const leaderboardRouter = require('./routes/leaderboard')
 
 const app = express()
-const PORT = 80
+const PORT = 42069
 
 database.connectToDB();
 
