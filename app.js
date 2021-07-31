@@ -7,11 +7,11 @@ const usersRouter = require('./routes/user')
 const leaderboardRouter = require('./routes/leaderboard')
 
 const app = express()
-const PORT = 42069
+const PORT = 80
 
 database.connectToDB();
 
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.json());
 app.use(express.urlencoded({
